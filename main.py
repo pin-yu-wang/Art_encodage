@@ -19,8 +19,22 @@ def artcode_i(s):
     """
     
     # votre code ici
-
-    return [ ]
+    k = 1
+    n = len(s)
+    C =[s[0]]
+    O = [1]
+    if n == 0 :
+        return [],[] # cas de base
+    
+    
+    while k < n :
+        if s[k] == s[k-1]:
+            O[-1] = O[-1] + 1
+        else :
+            C.append(s[k]) and O.append(1)
+        k = k + 1
+    L = [zip(C,O)]
+    return L
 
 
 def artcode_r(s):
